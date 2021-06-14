@@ -1,0 +1,1 @@
+here i go to learn about the redirects comands
