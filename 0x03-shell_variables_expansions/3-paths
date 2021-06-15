@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH find /* -maxdepth 0 -type d | wc -w
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
