@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -d "H I"
+tr -d "c C"
