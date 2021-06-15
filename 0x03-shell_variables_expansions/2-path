@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir action PATH
+cut -d : 21 mkdir action
