@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-#displays a the bash procces with them PID
-i=0
-while ((i < 1))
+#displays a infinite loop with sleep 2
+for ((; ;))
 do
   echo "To infinity and beyond"
   sleep 2
