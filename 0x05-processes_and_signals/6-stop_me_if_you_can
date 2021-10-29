@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-#displays a infinite loop with sleep 2
+#displays stop an infinite
 pkill -f 4-to_infinity_and_beyond
