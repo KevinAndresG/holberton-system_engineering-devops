@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying FizzBuzz
-i=0
-while ((i < 100))
+for i in {1..100}
 do
-((i++))
 if ((i%15 == 0))
 then
     echo "FizzBuzz"
