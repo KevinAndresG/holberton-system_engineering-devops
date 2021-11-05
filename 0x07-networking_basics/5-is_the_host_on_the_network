@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 #ping to one IP
 arggs=$#
 if [ $arggs -eq 1 ]
