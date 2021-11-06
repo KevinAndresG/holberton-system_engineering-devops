@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#listener port
+
+nc -lv 98
