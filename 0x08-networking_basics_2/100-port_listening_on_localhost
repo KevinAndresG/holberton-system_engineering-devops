@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #listener port
-nc -lvp 127.0.0.1 98
+telnet localhost 98
