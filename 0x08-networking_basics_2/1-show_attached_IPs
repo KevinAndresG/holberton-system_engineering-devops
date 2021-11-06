@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #display all the IPV4
-ifconfig -a | grep 'inet addr:'| awk {'print $2'}
+ifconfig -a | grep -w inet | awk '{print $2}'
+
