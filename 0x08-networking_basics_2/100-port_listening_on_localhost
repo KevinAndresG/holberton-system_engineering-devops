@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #listener port
-sudo nc -lvp 98
+sudo nc -lv 127.0.0.1 98
