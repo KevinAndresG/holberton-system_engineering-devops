@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script that creates an RSA key pair
+ssh-keygen -b 4096 -t rsa -p betty | cat ~/.ssh/id_rsa.pub | "cat >> school.pub" | cat ~/.ssh/id_rsa | "cat >> school"
