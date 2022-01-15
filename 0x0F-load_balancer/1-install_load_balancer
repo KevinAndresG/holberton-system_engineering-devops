@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# modify the nginx.config file
+sudo apt-get update
+sudo apt-get -y upgrade
+sudo apt install -y haproxy
+echo "frontend http_front
+         bind *:80
+         stats uri /haproxy?stats
+         default_backend http_back
+
+backend http_back
+        balance roundrobin
+        server 3348-web-01  35.243.183.11:80 check
+        server 3348-web-02  34.201.98.44:80 check" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
