@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# custom error 404 page
+
+sudo service nginx start
+echo "<body style='margin: 0px; background: url(https://i.postimg.cc/cCv82n6Q/fondo.png) center fixed no-repeat; background-size: 1100p\
+x'>
+  <h1 style='color: #FFFFFF; text-align: center; background-color: black; margin: 0px; border-bottom: 2px #00FFFF solid'>Ceci n'e\
+st pas une page</h1>
+  <h2 style='text-align: center; margin-top: 15%; position: relative; z-index: 1'><font size=5>are <sup>you</sup> <sub>sure</sub>\
+ <sup>what</sup  ><sub>you</sub> <sup>are</sup> <sub>looking</sub for?</font size> <u><br><font size=7><strong>ERROR 404</strong>\
+</font size></u></h2>
+  <footer style='text-align: center; border-top: 2px #00FFFF solid; margin-top: 245px; padding-top: 10px; position: relative'><b>\
+Holberton School</b></footer>
+</body>" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo service nginx restart
