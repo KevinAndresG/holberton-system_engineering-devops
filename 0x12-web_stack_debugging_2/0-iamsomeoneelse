@@ -2,5 +2,5 @@
 # who am i?                                                                                                                             
                                                                                                                                         
 usr=$1                                                                                                                                  
-id -u $usr &>/dev/null || useradd -m $usr                                                                                               
-su - $usr -c 'whoami'
+id -u "$usr" &>/dev/null || useradd -m "$usr"                                                                                              
+su - "$usr" -c 'whoami'
