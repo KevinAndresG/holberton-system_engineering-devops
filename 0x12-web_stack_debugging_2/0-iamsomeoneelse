@@ -1,0 +1,6 @@
+#!/usr/bin/env bash                                                                                                                     
+# who am i?                                                                                                                             
+                                                                                                                                        
+usr=$1                                                                                                                                  
+id -u $usr &>/dev/null || useradd -m $usr                                                                                               
+su - $usr -c 'whoami'
