@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # who am i?
 usr=$1
-sudo -u "$usr" command 'whoami'
+sudo -u "$usr" 'whoami'
