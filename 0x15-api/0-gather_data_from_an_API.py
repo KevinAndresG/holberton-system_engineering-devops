@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 """
     get the id pased as argument
+    and get the info
+    of that emplyeed
 """
 import requests
 from sys import argv
+
+
 """ the user """
 api_user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
 response = requests.get(api_user)
