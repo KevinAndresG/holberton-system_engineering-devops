@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-    get the id pased as argument
+"""get the id pased as argument
     and get the info
     of that emplyeed
 """
