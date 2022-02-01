@@ -10,10 +10,19 @@ from sys import argv
 
 api_user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
 response = requests.get(api_user)
+user_dict = response.json()
 api_todos = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
     argv[1])
 response2 = requests.get(api_todos)
-f = csv.writer(open("{}.csv".format(argv[1]), "w"))
+todos_dict = response2.json()
+count = 0
+print(len(response2.json()))
 for x in response2.json():
-    f.writerow([x["userId"], response.json()[
-        "username"], x["completed"], x["title"]])
+    data = []
+    a = [argv[1], user_dict["username"]]
+    b = [todos_dict[count]["completed"], todos_dict[count]["title"]]
+    c = a + b
+    count += 1
+    with open('{}.csv'.format(argv[1]), 'a+') as file:
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL, delimiter=',')
+        writer.writerow(c)
