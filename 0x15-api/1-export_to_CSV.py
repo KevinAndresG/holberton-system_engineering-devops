@@ -12,13 +12,10 @@ if __name__ == "__main__":
 
     api_user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
     response = requests.get(api_user)
-    user_dict = response.json()
     api_todos = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
         argv[1])
     response2 = requests.get(api_todos)
-    todos_dict = response2.json()
-    a = [argv[1], user_dict["username"]]
-
+    a = [argv[1], response.json()["username"]]
     for x in response2.json():
         b = [x["completed"], x["title"]]
         c = a + b
