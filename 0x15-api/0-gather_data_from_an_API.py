@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""get the id pased as argument
+"""
+    get the id pased as argument
     and get the info
     of that emplyeed
 """
@@ -21,7 +22,7 @@ if __name__ == "__main__":
             if i["completed"] is True:
                 completed += 1
             todo += 1
-        print(f"Employee {emp_name} is done with tasks({completed}/{todo})")
+        print("Employee {} is done with tasks({}/{})".format(emp_name, completed, todo))
         list_todo = 0
         for f in response2.json():
             if f["completed"] is True:
