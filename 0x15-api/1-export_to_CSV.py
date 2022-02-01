@@ -16,13 +16,13 @@ api_todos = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
 response2 = requests.get(api_todos)
 todos_dict = response2.json()
 count = 0
-print(len(response2.json()))
+
 for x in response2.json():
     data = []
     a = [argv[1], user_dict["username"]]
     b = [todos_dict[count]["completed"], todos_dict[count]["title"]]
     c = a + b
     count += 1
-    with open('{}.csv'.format(argv[1]), 'a+') as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_ALL, delimiter=',')
+    with open("{}.csv".format(argv[1]), 'a+') as file:
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         writer.writerow(c)
