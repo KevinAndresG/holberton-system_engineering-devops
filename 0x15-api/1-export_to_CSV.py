@@ -17,13 +17,11 @@ if __name__ == "__main__":
         argv[1])
     response2 = requests.get(api_todos)
     todos_dict = response2.json()
-    count = 0
     a = [argv[1], user_dict["username"]]
 
     for x in response2.json():
-        b = [todos_dict[count]["completed"], todos_dict[count]["title"]]
+        b = [x["completed"], x["title"]]
         c = a + b
-        count += 1
         with open("{}.csv".format(argv[1]), 'a+') as file:
             writer = csv.writer(file, quoting=csv.QUOTE_ALL)
             writer.writerow(c)
