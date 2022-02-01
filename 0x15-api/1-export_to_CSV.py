@@ -18,10 +18,9 @@ if __name__ == "__main__":
     response2 = requests.get(api_todos)
     todos_dict = response2.json()
     count = 0
+    a = [argv[1], user_dict["username"]]
 
     for x in response2.json():
-        data = []
-        a = [argv[1], user_dict["username"]]
         b = [todos_dict[count]["completed"], todos_dict[count]["title"]]
         c = a + b
         count += 1
